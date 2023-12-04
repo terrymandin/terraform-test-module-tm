@@ -42,8 +42,6 @@ The following input variables are required:
 ### <a name="input_location"></a> [location](#input\_location)
 
 Description: (Required) The Azure location where the Orchestrated Virtual Machine Scale Set should exist. Changing this forces a new resource to be created.
-<br>
--> **NOTE:** Test Note
 
 Type: `string`
 
