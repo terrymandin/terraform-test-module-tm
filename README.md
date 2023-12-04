@@ -42,6 +42,7 @@ The following input variables are required:
 ### <a name="input_location"></a> [location](#input\_location)
 
 Description: (Required) The Azure location where the Orchestrated Virtual Machine Scale Set should exist. Changing this forces a new resource to be created.
+-> Test Note
 
 Type: `string`
 
@@ -54,6 +55,7 @@ Type: `string`
 ### <a name="input_platform_fault_domain_count"></a> [platform\_fault\_domain\_count](#input\_platform\_fault\_domain\_count)
 
 Description: (Required) Specifies the number of fault domains that are used by this Orchestrated Virtual Machine Scale Set. Changing this forces a new resource to be created.
+<br>**NOTE:** The number of Fault Domains varies depending on which Azure Region you're using - a list can be found [here](https://github.com/MicrosoftDocs/azure-docs/blob/master/includes/managed-disks-common-fault-domain-region-list.md).
 
 Type: `number`
 
@@ -85,6 +87,7 @@ Default: `null`
 
 Description: - `enabled` - (Required) Should the automatic instance repair be enabled on this Orchestrated Virtual Machine Scale Set? Possible values are `true` and `false`.
 - `grace_period` - (Optional) Amount of time for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. Possible values are between `30` and `90` minutes. The time duration should be specified in `ISO 8601` format (e.g. `PT30M` to `PT90M`). Defaults to `PT30M`.
+**NOTE:** To enable the automatic\_instance\_repair, the Orchestrated Virtual Machine Scale Set must have a valid health\_probe\_id or an [Application Health Extension](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-health-extension).
 
 Type:
 

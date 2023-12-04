@@ -15,7 +15,10 @@ variable "name" {
 
 variable "platform_fault_domain_count" {
   type        = number
-  description = "(Required) Specifies the number of fault domains that are used by this Orchestrated Virtual Machine Scale Set. Changing this forces a new resource to be created."
+  description = <<-EOT
+(Required) Specifies the number of fault domains that are used by this Orchestrated Virtual Machine Scale Set. Changing this forces a new resource to be created.
+<br>**NOTE:** The number of Fault Domains varies depending on which Azure Region you're using - a list can be found [here](https://github.com/MicrosoftDocs/azure-docs/blob/master/includes/managed-disks-common-fault-domain-region-list.md).
+EOT
   nullable    = false
 }
 
