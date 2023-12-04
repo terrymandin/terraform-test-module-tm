@@ -87,7 +87,7 @@ Default: `null`
 
 Description: - `enabled` - (Required) Should the automatic instance repair be enabled on this Orchestrated Virtual Machine Scale Set? Possible values are `true` and `false`.
 - `grace_period` - (Optional) Amount of time for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. Possible values are between `30` and `90` minutes. The time duration should be specified in `ISO 8601` format (e.g. `PT30M` to `PT90M`). Defaults to `PT30M`.
-**NOTE:** To enable the automatic\_instance\_repair, the Orchestrated Virtual Machine Scale Set must have a valid health\_probe\_id or an [Application Health Extension](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-health-extension).
+<br><br>**NOTE:** To enable the automatic\_instance\_repair, the Orchestrated Virtual Machine Scale Set must have a valid health\_probe\_id or an [Application Health Extension](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-health-extension).
 
 Type:
 
